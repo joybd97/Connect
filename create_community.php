@@ -17,7 +17,7 @@ if(isset($_POST['create_community'])){
       
       if(count($dose_exist)!=0){
        
-        redirect_with_interval('this community name alreaday exits !',getHost().'./create_community.php');
+        redirect_with_interval('this community name already exits !',getHost().'./create_community.php');
         return;
 
       }
@@ -78,7 +78,7 @@ if(isset($_POST['create_community'])){
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>Comunity Create </title>
+    <title>Community Create</title>
   </head>
   <body>
     
@@ -89,7 +89,7 @@ if(isset($_POST['create_community'])){
 
     <div class="container ">
 
-    <div class="display-2">Create new community</div>
+    <div class="display-2"> <h3 align=center>New community</h3></div>
 
     <div class="jumbotron row ">
     <div class="col-sm-4"></div>
