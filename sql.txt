@@ -7,6 +7,48 @@ CREATE TABLE `user` (
   `full_name` varchar(100) DEFAULT NULL,
   `is_active` tinyint(1) NOT NULL
 );
+
+CREATE TABLE `community` (
+  `id` int(11) NOT NULL,
+  `community_name` varchar(500) NOT NULL,
+  `about` varchar(500) NOT NULL,
+  `cover_photo_url` varchar(500) DEFAULT NULL,
+  `logo_url` varchar(500) DEFAULT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp(),
+  `tag_name` varchar(5000) NOT NULL,
+  `public` tinyint(1) NOT NULL DEFAULT 1,
+  `user_id` int(11) NOT NULL
+);
+
+CREATE TABLE `post` (
+  `id` int(11) NOT NULL,
+  `date` datetime NOT NULL DEFAULT current_timestamp(),
+  `title` varchar(500) NOT NULL,
+  `text` varchar(2000) NOT NULL,
+  `link` varchar(500) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `community_id` int(11) NOT NULL,
+  `public` tinyint(1) NOT NULL DEFAULT 1
+);
+
+CREATE TABLE `file` (
+  `file_type` varchar(500) NOT NULL,
+  `url` varchar(500) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `file_name` varchar(5000) NOT NULL
+);
+
+CREATE TABLE `community_users` (
+  `community_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `joined` datetime NOT NULL DEFAULT current_timestamp(),
+  `approveed_as_mod` tinyint(1) NOT NULL DEFAULT 0
+);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
 ALTER TABLE `user` ADD UNIQUE(`email`);
 ALTER TABLE `user` ADD `alternate_email` VARCHAR(100) NULL AFTER `email`;
 ALTER TABLE `user` ADD `full_name` VARCHAR(100) NULL AFTER `alternate_email`;
