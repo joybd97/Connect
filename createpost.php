@@ -11,11 +11,11 @@ $all_communitys=fetch_data("select community_name,id from community where id in 
 
 if(count($all_communitys)==0){
     $get_host=getHost();
-    echo "<h1>join a community in oder to post someting </h1>
+    echo "<h2 align=center>Join a Community to Make Your First Post</h2>
     <script>
         setInterval(() => {
             window.location.assign('$get_host');
-        }, 1000);
+        }, 2000);
     </script>
     ";
     return ;
@@ -81,11 +81,11 @@ if (isset($_POST['submit'])) {
                    
                     // file upload succesfully 
                  
-                    //do someting 
+                    
                 }
                 else{
         
-                    echo ' !opps someting gone wrong.';
+                    echo ' Something went wrong.';
                     break;
                 }
             }

@@ -18,19 +18,15 @@ LoginCheck();
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-  <title>Connect </title>
+  <title>Connect</title>
 </head>
 
 <style>
   .d {
-    /* background: #95959e; */
+   
     min-height: 100vh;
   }
 
-  .e {
-    /* background: #968181; */
-
-  }
 
   .vote_btns {
       display: flex;
@@ -45,9 +41,7 @@ LoginCheck();
       border-right: 0.5px solid darkslategray;
     }
 
-    .vote_btns.up {}
-
-    .vote_btns.down {}
+    
 </style>
 
 <body>
@@ -161,7 +155,7 @@ LoginCheck();
     <div class="col-sm-4 ">
 
       <div class="community_list card">
-        <div class="card-header">Communitys</div>
+        <div class="card-header">Communities</div>
         <ol class="list-group list-group-numbered">
 
           <?php 
@@ -190,7 +184,7 @@ LoginCheck();
 
 
         <div class="card mt-3">
-          <a class="btn btn-outline-secondary" href="./create_community.php"> 🌐 Crate a new community </a>
+          <a class="btn btn-outline-secondary" href="./create_community.php"> 🌐 Create Community </a>
         </div>
       </div>
 
@@ -201,22 +195,18 @@ LoginCheck();
 
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
     </script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
+  
 
     <script>
       function goToCreatePostPage() {
-        window.location.assign("../ewu_connect/createpost.php");
+        window.location.assign("../connect/createpost.php");
       }
     </script>
 </body>

@@ -104,7 +104,7 @@ if($result[0]["password"]==$Old_Password)
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>Ewu connect-User profile</title>
+    <title><?php echo $_SESSION['username']?>'s Profile</title>
   </head>
   <body>
  
@@ -116,7 +116,7 @@ if($result[0]["password"]==$Old_Password)
 
 
 <div class="container">
-<h1>welcome <?php echo $_SESSION['username']?></h1>
+<h3>Welcome back <?php echo $_SESSION['username']?></h3>
 
 </div>
 
@@ -125,13 +125,13 @@ if($result[0]["password"]==$Old_Password)
 <div class="container mt-5 ">
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" id="nav-timeline" aria-current="page" href="#"  onclick="showThisTab('timeline')"  >My time line</a>
+      <a class="nav-link active" id="nav-timeline" aria-current="page" href="#"  onclick="showThisTab('timeline')"  >My Posts</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="nav-aboutme" href="#" onclick="showThisTab('aboutme')" >About me </a>
+      <a class="nav-link" id="nav-aboutme" href="#" onclick="showThisTab('aboutme')" >My Info </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="nav-edit-profile" href="#" onclick="showThisTab('edit-profile')" >Edit my info </a>
+      <a class="nav-link" id="nav-edit-profile" href="#" onclick="showThisTab('edit-profile')" >Update My Info </a>
     </li>
     <!-- <li class="nav-item">
       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

@@ -47,7 +47,7 @@ if($data[0]['password']==$password){
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>ewu connect sign up page </title>
+    <title>Connect Login</title>
   </head>
   <body>
     
@@ -67,7 +67,7 @@ if($data[0]['password']==$password){
         <div class="row">
       <div class="col-sm"></div>
       <div class="col-md">
-      <h1>Login page </h1>
+      <h4 align=center>Login page </h4>
             <form method="post" action="">
             <div class="form-floating mb-3">
             <input type="text" class="form-control" name="username" id="username" placeholder="Username">

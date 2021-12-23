@@ -10,10 +10,10 @@ $host_name=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME']."/connect";
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?=$host_name?>/login.php">Login Page</a>
+          <a class="nav-link active" aria-current="page" href="<?=$host_name?>/login.php">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?=$host_name?>/signup.php">Sign Up Page</a>
+          <a class="nav-link active" aria-current="page" href="<?=$host_name?>/signup.php">Sign Up</a>
         </li>
         
         <?php
@@ -21,7 +21,7 @@ $host_name=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME']."/connect";
             
             if(isset($_SESSION['uid'])){
               echo'<li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="'.$host_name.'/profile.php">Profile Page</a>
+              <a class="nav-link active" aria-current="page" href="'.$host_name.'/profile.php">Profile</a>
           
             </li>';
             }
