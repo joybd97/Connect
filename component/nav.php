@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="asset/nav.css">
 <?php 
 $host_name=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME']."/connect";
 ?>
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <nav class="navbar navbar-expand-lg navstl">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?=$host_name?>">Connect</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

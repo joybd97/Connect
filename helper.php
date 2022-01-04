@@ -68,6 +68,7 @@ function fetch_data($sql) {
       
       header("Location: $get_host/login.php");
   }
+  
   }
 
   function redirect($url){

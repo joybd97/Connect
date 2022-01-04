@@ -98,38 +98,41 @@ if(isset($_POST['submit'])){
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
   <title>Sign up to connect </title>
+  <link rel="stylesheet" href="asset/signup.css">
 </head>
 
 <body>
   <!-- nav var  -->
   <?php require_once('component/nav.php'); ?>
   
-  </div>
+  <div class="container ">
+      
 
 
-
-  <div class="container">
-    <h4 class="text-center">Join to Connect</h4>
-
-    <div class="row">
+        <div class="row">
       <div class="col-sm"></div>
       <div class="col-md">
-        <form method="post" action="">
+      
+            <div class="area">
+            <h4 class="text-center">Join to Connect</h4>
+
+        <form method="post" action="" class="signupArea">
          
-          <div class="form mb-3">
+          <div class="form input">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" name="email" id="email"
+            <input type="email" class="form-control " name="email" id="email"
               placeholder="name@std.ewubd.edu/name@ewubd.edu">
           </div>
-          <div class="form-">
+          <div class="form- input">
             <label for="floatingPassword">Password</label>
             <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
           </div>
           <br>
 
-          <button type="submit" name="submit" class="btn btn-primary btn-lg">Sign Up !</button>
+          <button type="submit" name="submit" class="btn btn-primary btn-lg">Create Account</button>
         </form>
-      </div>
+            </div>
+            </div>
 
       <div class="col-sm"></div>
 
@@ -137,8 +140,8 @@ if(isset($_POST['submit'])){
     </div>
 
 
-
   </div>
+  
 
 
 

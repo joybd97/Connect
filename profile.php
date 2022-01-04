@@ -4,6 +4,7 @@
 <?php 
 
 require("helper.php");
+
 session_start();
 $messageModal=['show'=>FALSE,'title'=>'...','body'=>'...'];
 LoginCheck();
@@ -11,6 +12,8 @@ LoginCheck();
 
 <?php
   $user_data= fetch_data("select username,full_name,alternate_email,email from user where id=".$_SESSION['uid']);
+  //$sql =  "select username,full_name,alternate_email,email from user where id=".$_SESSION['uid'];
+  //$user_data = $GLOBALS['conn']->query($sql);
 
   if(isset($_POST['update'])){
     $newName=$_POST['newName'];
@@ -105,6 +108,7 @@ if($result[0]["password"]==$Old_Password)
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <title><?php echo $_SESSION['username']?>'s Profile</title>
+    <link rel="stylesheet" href="asset/profile.css">
   </head>
   <body>
  
@@ -116,7 +120,7 @@ if($result[0]["password"]==$Old_Password)
 
 
 <div class="container">
-<h3>Welcome back <?php echo $_SESSION['username']?></h3>
+<h3 class="welcome">Welcome back <?php echo $_SESSION['username']?></h3>
 
 </div>
 
