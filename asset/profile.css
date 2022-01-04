@@ -1,8 +1,27 @@
 body{
     background-color: rgba(135, 207, 235, 0.603);
+    padding-bottom: 50px;
 }
 
 .welcome{
-    padding: 20px;
+    padding-top: 20px;
     
+}
+
+.info li{
+    box-shadow: 5px 5px 20px rgb(0, 4, 255);
+    padding: 5px;
+    color: royalblue;
+    background-color: saddlebrown;
+    border-radius: 5px;
+}
+
+.edit{
+    box-shadow: 5px 5px 20px rgb(0, 4, 255);
+    padding: 20px 5px;
+    border-radius: 5px;
+}
+
+.btn{
+    box-shadow: 5px 5px 20px rgb(153, 0, 255);
 }

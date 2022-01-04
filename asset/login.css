@@ -11,6 +11,13 @@ body{
 
 .input{
     color: navy;
+    text-align: center;
+    
+}
+
+input{
+    box-shadow: 5px 5px 10px lightgray;
+
     
 }
 

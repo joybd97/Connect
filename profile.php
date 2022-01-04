@@ -126,7 +126,7 @@ if($result[0]["password"]==$Old_Password)
 
 
 
-<div class="container mt-5 ">
+<div class="container mt-5 info ">
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link active" id="nav-timeline" aria-current="page" href="#"  onclick="showThisTab('timeline')"  >My Posts</a>
@@ -197,7 +197,7 @@ if($result[0]["password"]==$Old_Password)
     </div>
   </div>
   <div id="aboutme" style="display:none">
-      <div class="container">
+      <div class="container edit">
          
 
           <dl class="row">
@@ -223,8 +223,9 @@ if($result[0]["password"]==$Old_Password)
   </div>
   <div id="edit-profile"  style="display:none">
     <div class="container">
-      <h2>Edit Profile</h2>
-      <form method="post" action="" class="row g-3 ">
+      
+      <form method="post" action="" class="row g-3 edit">
+      <h2>Edit Information</h2>
         <div class="col-md-6">
 
           <label for="inputUNAme4" class="form-label">User Name</label>
@@ -245,8 +246,9 @@ if($result[0]["password"]==$Old_Password)
       </form>
 
       <div class=" mt-5">
+        
+        <form  method="post" action="" class="row g-3 edit">
         <h2>Password Change</h2>
-        <form  method="post" action="" class="row g-3">
           <div class="col-md-6">
             <label for="inputOPass4" class="form-label">Old Password</label>
             <input type="password" class="form-control" id="inputOPass4" name="Old_Password">
