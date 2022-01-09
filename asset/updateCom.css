@@ -1,0 +1,19 @@
+body{
+    background-color: rgba(135, 207, 235, 0.603);
+}
+
+.full{
+    background-color: rgba(43, 101, 226, 0.76);
+    box-shadow: 5px 5px 10px red;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.btn{
+    box-shadow: 5px 5px 20px rgb(153, 0, 255);
+    
+}

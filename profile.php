@@ -172,9 +172,7 @@ if($result[0]["password"]==$Old_Password)
 
                     }
                     ?>
-                    <a href="<?php echo getHost().'/updatepost.php/?p='.$res[$i]['pid'];?>">
-                      <span class="badge rounded-pill bg-info m-2">edit</span>
-                    </a>
+                    
 
                     <a href="<?php echo getHost().'/deletepost.php/?p='.$res[$i]['pid'];?>">
                       <span class="badge rounded-pill bg-danger m-2">delete</span>

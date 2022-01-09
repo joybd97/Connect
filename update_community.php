@@ -42,7 +42,7 @@ if(isset($_POST['update_community'])){
   
   
     $about=$_POST['about'];
-    $public=$_POST['public'];
+   // $public=$_POST['public'];
     $cover_photo_url=$community_objs[0]['cover_photo_url'];
     $avater_photo_url=$community_objs[0]['logo_url'];
 
@@ -71,7 +71,7 @@ if(isset($_POST['update_community'])){
 
 
 
-    $res=insert_data("update  community  set community_name='$community_name',tag_name='$community_tag_name',about='$about',public='$public',user_id=".$_SESSION['uid'].",cover_photo_url='$cover_photo_url',logo_url='$avater_photo_url'
+    $res=insert_data("update  community  set community_name='$community_name',tag_name='$community_tag_name',about='$about',user_id=".$_SESSION['uid'].",cover_photo_url='$cover_photo_url',logo_url='$avater_photo_url'
     where id=".$community_objs[0]['id']."
     ");
 
@@ -102,7 +102,8 @@ if(isset($_POST['update_community'])){
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>Comunity Create </title>
+    <title>Update Create </title>
+    <link rel="stylesheet" href="asset/updateCom.css">
   </head>
   <body>
     
@@ -111,9 +112,9 @@ if(isset($_POST['update_community'])){
   <?php require_once('component/nav.php'); ?>
   
 
-    <div class="container ">
+    <div class="container full ">
 
-    <div class="display-2">Create new community</div>
+    <div class="display-2"><h3 align=center> Edit Community</h3></div>
 
     <div class="jumbotron row ">
     <div class="col-sm-4"></div>
@@ -147,19 +148,12 @@ if(isset($_POST['update_community'])){
     </div>
     </div>
 
-    <div class="input-group mt-3">
-      <label class="input-group-text" for="inputGroupSelect01">Public group? </label>
-      <select class="form-select" value="<?=$community_objs[0]['public']?>" name="public" id="inputGroupSelect01">
-        <!-- <option selected>Choose...</option> -->
-        <option value="1">yes</option>
-        <option value="0">no</option>
-      </select>
-    </div>
+    
 
     <div class="mb-3">
             <label for="formFileMultiple1" class="form-label">Cover photo</label>
             <input class="form-control" type="file" name="cover_photo" id="formFileMultiple1" accept="image/png, image/jpeg" >
-            <small>upload a new image will overright the last image </small>
+            <small>*upload a new image will overright the last image </small>
             <br>
             <img src="<?=getHost().$community_objs[0]['cover_photo_url']?>" alt="" style="height: 100px" srcset="">
             
@@ -167,7 +161,7 @@ if(isset($_POST['update_community'])){
     <div class="mb-3">
             <label for="formFileMultiple" class="form-label">Avatar photo</label>
             <input class="form-control" type="file" name="avater_photo" id="formFileMultiple" accept="image/png, image/jpeg" >
-            <small>upload a new image will overright the last image </small>
+            <small>*upload a new image will overright the last image </small>
             <br>
 
             <img src="<?=getHost().$community_objs[0]['logo_url']?>" alt=""  style="height: 100px" srcset="">
@@ -176,7 +170,7 @@ if(isset($_POST['update_community'])){
             
 
     </div>
-    <input type="submit" class="mt-3 btn btn-primary"name="update_community" value="Create">
+    <input type="submit" class="mt-3 btn btn-primary"name="update_community" value="Submit">
     </form>
 
     

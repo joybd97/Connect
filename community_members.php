@@ -2,13 +2,11 @@
 
 require("helper.php");
 session_start();
-$messageModal=['show'=>FALSE,'title'=>'...','body'=>'...'];
-// LoginCheck();
 $community_tag_name="";
 $community_name="";
 $communiy_id="";
 ?>
-
+<?php require_once('component/nav.php'); ?>
 
 
 <?php 
@@ -112,6 +110,7 @@ if(isset($_SESSION['uid'])){
       text-shadow: -1px 1px 1px black;
     }
   </style>
+  <link rel="stylesheet" href="asset/c_member.css">
 </head>
 
 <body>
@@ -122,17 +121,21 @@ if(isset($_SESSION['uid'])){
 
 
 
-<div >
+<div class="list">
 <?php
 $result=fetch_data("select username from user join community_users ON user.id= community_users.user_id where community_users.community_id='$communiy_id';");
-echo " Commmunity Population List:  ";
+echo " Community Member List:  ";
+echo "<ul>";
 for($i=0; $i<count( $result);$i++)
 {
-   ?>
-   <div> <?=$result[$i]['username'];?> </div>
+  
+   echo "<li>";
+   echo $result[$i]['username'];
+   echo "</li>"; 
 
- <?php     
+    
 }
+echo "</ul>";
 ?>
 
 </div>

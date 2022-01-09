@@ -32,3 +32,7 @@ body{
 .btn-primary{
     box-shadow: 5px 5px 10px rgb(68, 0, 255);
 }
+
+.text-secondary p{
+    color: white;
+}

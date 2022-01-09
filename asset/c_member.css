@@ -1,0 +1,15 @@
+body{
+    background-color: rgba(135, 207, 235, 0.603);
+}
+
+.list{
+    padding: 50px;
+    background-color: blueviolet;
+    box-shadow: 2px 2px 5px rgb(0, 38, 255);
+    margin: 20px;
+    width: 300px;
+    border-radius: 20px;
+    
+    
+}
+
