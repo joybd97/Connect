@@ -87,13 +87,14 @@ if(isset($_POST['join_to_community'])){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="./asset/community.css">
+  
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
   <title><?=$community_name?></title>
+  <link rel="stylesheet" href="asset/community.css">
   <style>
     .vote_btns {
       display: flex;
@@ -220,7 +221,7 @@ if(isset($_POST['join_to_community'])){
       <div class="col-md-8 ">
 
         <!-- create post section  -->
-        <div class="card mb-3">
+        <div class="card mb-3 create">
           <div class="card-body" style="cursor: pointer;" onclick="goToCreatePostPage()">
             <div style="display: flex;
     align-items: baseline;
@@ -249,22 +250,19 @@ if(isset($_POST['join_to_community'])){
 
             ?>
 
-        <div class="card mb-3" style="">
+        <div class="card mb-3 post" style="">
           <div class="row g-0">
-            <div class="col-sm-1   vote_btns">
-
-              <div class="up">up</div>
-              <div class="down">down</div>
-
-            </div>
+            
             <div class="col-md-8  ">
               <div class="card-body">
+                
+                <h5 class="card-title"><?=$getpost[$i]['title']?></h5>
+                <p class="card-text"><?=$getpost[$i]['text']?></p>
                 <div>
                   <small>Posted by <a href=""><?=$getpost[$i]['username']?></a></small>
                 </div>
-                <h5 class="card-title"><?=$getpost[$i]['title']?></h5>
-                <p class="card-text"><?=$getpost[$i]['text']?></p>
                 <p class="card-text"><small class="text-muted">Last updated <?=$getpost[$i]['date']?></small></p>
+
               </div>
             </div>
             <div class="col-md-2 ">
@@ -314,34 +312,35 @@ if(isset($_POST['join_to_community'])){
 
       
      
-      <div class="col-sm-4 ">
+      <div class="col-sm-4">
 
 
-        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+        <div class="card border-secondary mb-3 about" style="max-width: 18rem;">
           <div class="card-header">ABOUT</div>
           <div class="card-body text-secondary">
             <p>
               <?=$community_obj[0]['about']?>
             </p>
-            <form method="get" action="http://localhost/ewu_connect/community_members.php">
+            <form method="get" action="http://localhost/connect/community_members.php">
             
             <input type="text" hidden value="<?=$community_obj[0]['tag_name']?>" name="c">
-          <button type="submit" class="btn btn-primary" name="member" >Members
+          <button type="submit" class="btn btn-primary" name="member" >Total Members
           [<span class="badge bg-primary rounded-pill"><?php 
               $result=fetch_data("select count(user_id) as total_mem FROM community_users where community_id='$communiy_id';");
               echo($result[0]['total_mem']);
               ?></span>]</button>
         </form>
             <hr>
-            <small>🍰 Created : <?=$community_obj[0]['created']?></small>
+           <div class="time">
+           <small>🍰 Created : <?=$community_obj[0]['created']?></small>
             <br>
-            <small>
-              Total Members: 
+            
               <?php 
               $result=fetch_data("select count(user_id) as total_mem FROM community_users where community_id='$communiy_id';");
-              echo($result[0]['total_mem']);
+              
               ?>
             </small>
+           </div>
 
           </div>
         </div>
@@ -349,15 +348,7 @@ if(isset($_POST['join_to_community'])){
 
         <!--  -->
 
-        <div class="card border-secondary mb-3" style="max-width: 18rem;">
-          <div class="card-header">Rules</div>
-          <div class="card-body text-secondary">
-
-            <!-- rules gouse here  -->
-
-          </div>
-        </div>
-
+        
       </div>
 
       <!--end col9-->

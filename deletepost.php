@@ -7,7 +7,7 @@ $mypost_info=[];
 if(isset($_GET['p'])){
  $post_id=$_GET['p'];   
 }
-$mypost_info=fetch_data("SELECT post.id as pid,post.title as post_title,text,link,post.user_id as post_uid,community_name,post.public as post_public, community.public as community_public from post join community on post.community_id=community.id where post.id=$post_id and post.user_id=".$_SESSION['uid']);
+$mypost_info=fetch_data("SELECT post.id as pid,post.title as post_title,text,link,post.user_id as post_uid,community_name,post.public as post_public from post join community on post.community_id=community.id where post.id=$post_id and post.user_id=".$_SESSION['uid']);
 if(count($mypost_info)!=1){
     $get_host=getHost();
     echo "<h1>you cant delete this post </h1>

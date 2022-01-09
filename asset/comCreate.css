@@ -1,0 +1,17 @@
+body{
+    background-color: rgba(135, 207, 235, 0.603);
+   
+}
+
+.upt{
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgb(153, 0, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    color: blue;
+    
+}
+
+.btn-primary{
+    box-shadow: 5px 5px 10px rgb(68, 0, 255);
+}

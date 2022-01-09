@@ -1,3 +1,39 @@
 body{
     background-color: rgba(135, 207, 235, 0.603);
 }
+
+.create{
+    background-color: rgba(82, 0, 136, 0.445);
+    box-shadow: 5px 5px 5px 5px rgba(76, 0, 255, 0.815);
+    border-radius: 30px;
+}
+
+.post{
+    background-color: rgba(135, 207, 235, 0.89);
+    color: brown;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(153, 0, 255);
+}
+
+.list{
+   background-color: rgba(85, 107, 47, 0.781);
+   color: white;
+   box-shadow: 5px 5px 10px rgb(153, 0, 255);
+   margin-top: 20px;
+   }
+
+.list-group-numbered li{
+    background-color: rgba(0, 47, 202, 0.397);
+    color: white;
+    
+
+}
+
+.me-auto a{
+    text-decoration: none;
+    color: white;
+}
+
+.cbtn{
+    box-shadow: 5px 5px 10px rgb(153, 0, 255);
+}

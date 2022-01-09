@@ -56,7 +56,7 @@ LoginCheck();
     <div class="row">
       <div class="col-md-8 d">
         <!-- create post section  -->
-        <div class="card mb-3 mt-3">
+        <div class="card mb-3 mt-3 create">
           <div class="card-body" style="cursor: pointer;" onclick="goToCreatePostPage()">
             <div style="display: flex;
                 align-items: baseline;
@@ -93,23 +93,21 @@ LoginCheck();
       
       ?>
 
-        <div class="card mb-3" style="">
-          <div class="row g-0">
-            <div class="col-sm-1   vote_btns">
-
-              <div class="up">up</div>
-              <div class="down">down</div>
-
-            </div>
+        <div class="card mb-3 post" style="">
+          <div class="row g-0 ">
+            
             <div class="col-md-8  ">
-              <div class="card-body">
-                <div>
-                  <small><a href=""><b><?=$getpost[$i]['community_name']?></b></a> Posted by <a href=""><?=$getpost[$i]['username']?></a></small>
-                </div>
+              <div class="card-body ">
+                
                 <h5 class="card-title"><?=$getpost[$i]['title']?></h5>
                 <p class="card-text"><?=$getpost[$i]['text']?></p>
-                <p class="card-text"><small class="text-muted">Last updated <?=$getpost[$i]['date']?></small></p>
+                
+                <div> Posted on
+                  <small><a href=""><b><?=$getpost[$i]['community_name']?></b></a> by <a href=""><?=$getpost[$i]['username']?></a></small>
+                  <p class="card-text"><small class="text-muted">Last updated <?=$getpost[$i]['date']?></small></p>
+                </div>
               </div>
+              
             </div>
             <div class="col-md-2 ">
               <?php 
@@ -153,10 +151,10 @@ LoginCheck();
 
 
     </div>
-    <div class="col-sm-4 ">
+    <div class="col-sm-4  ">
 
-      <div class="community_list card">
-        <div class="card-header">Communities</div>
+      <div class="community_list card list">
+        <div class="card-header lHead">Communities</div>
         <ol class="list-group list-group-numbered">
 
           <?php 
@@ -184,7 +182,7 @@ LoginCheck();
 
 
 
-        <div class="card mt-3">
+        <div class="card mt-3 cbtn">
           <a class="btn btn-outline-secondary" href="./create_community.php"> 🌐 Create Community </a>
         </div>
       </div>

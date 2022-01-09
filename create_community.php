@@ -25,7 +25,7 @@ if(isset($_POST['create_community'])){
   
   
     $about=$_POST['about'];
-    $public=$_POST['public'];
+    //$public=$_POST['public'];
     $cover_photo_url=getHost()."/asset/img/default_cover.jpg";
     $avater_photo_url=getHost()."/asset/img/defualt_logo.jpg";
 
@@ -47,8 +47,8 @@ if(isset($_POST['create_community'])){
 
 
 
-    $res=insert_data("INSERT into community (community_name,tag_name,about,public,user_id,cover_photo_url,logo_url) 
-    values('$community_name','$community_tag_name','$about','$public',".$_SESSION['uid'].",'$cover_photo_url',
+    $res=insert_data("INSERT into community (community_name,tag_name,about,user_id,cover_photo_url,logo_url) 
+    values('$community_name','$community_tag_name','$about',".$_SESSION['uid'].",'$cover_photo_url',
     '$avater_photo_url' )");
 
     if($res['status']){
@@ -79,6 +79,7 @@ if(isset($_POST['create_community'])){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <title>Community Create</title>
+    <link rel="stylesheet" href="asset/comCreate.css">
   </head>
   <body>
     
@@ -87,7 +88,7 @@ if(isset($_POST['create_community'])){
   <?php require_once('component/nav.php'); ?>
   
 
-    <div class="container ">
+    <div class="container upt">
 
     <div class="display-2"> <h3 align=center>New community</h3></div>
 
@@ -123,14 +124,14 @@ if(isset($_POST['create_community'])){
     </div>
     </div>
 
-    <div class="input-group mt-3">
+    <!-- <div class="input-group mt-3">
       <label class="input-group-text" for="inputGroupSelect01">Public group? </label>
       <select class="form-select" name="public" id="inputGroupSelect01">
         <option selected>Choose...</option>
         <option value="1">yes</option>
         <option value="0">no</option>
       </select>
-    </div>
+    </div> -->
 
     <div class="mb-3">
             <label for="formFileMultiple1" class="form-label">Cover photo</label>
