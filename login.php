@@ -24,6 +24,12 @@ if($data[0]['password']==$password){
 }
 }
 }
+if (!empty($_POST['remember'])){
+  
+   setcookie("uID", $username, time()+36000);
+  
+   setcookie("Pass", $password, time()+36000);
+}
 
 
 
@@ -67,15 +73,17 @@ if($data[0]['password']==$password){
             <h4 align=center>Login to Connect </h4>
             <form method="post" action="" class="loginArea">
             <div class="form-floating mb-3 input">
-            <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+            <input type="text" class="form-control" name="username" id="username" placeholder="Username" value=<?php echo $_COOKIE['uID']; ?>>
             <label for="floatingInput"> Username </label>
             </div>
            
             <div class="form-floating input">
-            <input type="password" name="password"class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" name="password"class="form-control" id="floatingPassword" placeholder="Password" value=<?php echo $_COOKIE['Pass']; ?>>
             <label for="floatingPassword">Password</label>
             </div>
             <br>
+
+             <input type="checkbox" id="remember" name="remember" value="Remember"><b>Remember Me</b> <br>
 
             <button type="submit" name="submit" class="btn btn-primary btn-lg">Login </button>
             </form>
