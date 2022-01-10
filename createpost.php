@@ -119,7 +119,7 @@ if (isset($_POST['submit'])) {
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="asset/post.css">
     <title>Create Post</title>
   </head>
   <body>
@@ -127,22 +127,23 @@ if (isset($_POST['submit'])) {
 
     <div class="container">
         <div class="display-6">
-        Create post here
+        
         </div>
-        <div class="card">
+        <div class="card full">
+        <h3 align=center>Create a New Post</h3>
         <div class="card-body">
         <form action="" method="post" class="needs-validation"  novalidate   enctype="multipart/form-data">
             <!-- select community -->
             <div class="row mb-3">
                 <div class="col-sm-4">
-                    <label for="comm" class="form-label">Community </label>
+                    <label for="comm" class="form-label">Community Name</label>
                     <select class="form-select" id="comm" name="community_id" aria-label="Default select example">
                     
                     <?php 
                    
                         if(!isset($_GET['c'])){
                             
-                            echo "<option selected>Open this select community</option>";
+                            echo "<option selected>Select A Community</option>";
                         }
                         for($i=0;$i<count($all_communitys);$i++)
                         {
